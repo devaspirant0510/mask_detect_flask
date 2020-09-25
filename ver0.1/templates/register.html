@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block content %}
+<span class="badge badge-secondary">인공지능 마스크 감지</span>
+<form action="/register" method="post">
+
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" >이름</span>
+      </div>
+      <input type="text" class="form-control" placeholder="name" aria-label="Username" aria-describedby="basic-addon1" name="name">
+    </div>
+
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text">이메일</span>
+      </div>
+      <input type="email" class="form-control" placeholder="email" aria-label="Username" aria-describedby="basic-addon1" name="email">
+    </div>
+
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text">아이디</span>
+      </div>
+      <input type="text" class="form-control" placeholder="id" aria-label="Username" aria-describedby="basic-addon1" name="id">
+    </div>
+
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" >비밀번호</span>
+      </div>
+      <input type="password" class="form-control" placeholder="password" aria-label="Username" aria-describedby="basic-addon1" name="password">
+    </div>
+
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" >비밀번호 재확인 </span>
+      </div>
+      <input type="password" class="form-control" placeholder="password" aria-label="Username" aria-describedby="basic-addon1" name="check">
+    </div>
+
+    <button type="submit" class="btn btn-primary">로그인</button>
+</form>
+{% endblock %}
