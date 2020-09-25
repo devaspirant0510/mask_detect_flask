@@ -1,0 +1,389 @@
+
+<!DOCTYPE html>
+{% block content %}
+{% endblock %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MASKD</title> 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+     <!-- Site Metas -->
+ 
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="static/images/favicon.ico" type="static/image/x-icon" />
+    <link rel="apple-touch-icon" href="static/images/apple-touch-icon.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="static/css/animate.css">
+
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="static/css/color.css">
+
+    <link rel="stylesheet" href="static/css/custom.css">
+
+    <link rel="stylesheet" href="static/css/flaticon.css">
+
+    <link rel="stylesheet" href="static/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="static/css/prettyPhoto.css">
+
+    <link rel="stylesheet" href="static/css/responsive.css">
+
+    <link rel="stylesheet" href="static/css/slit-custom.css">
+
+    <link rel="stylesheet" href="static/css/custom.css">
+
+    <link rel="stylesheet" href="static/css/tippy.css">
+
+    <link rel="stylesheet" href="static/css/style.css">
+    <!-- ALL VERSION CSS -->
+    <link rel="stylesheet" href="static/css/versions.css">
+
+    <link rel="stylesheet" href="static/css/covid.css">
+    <!-- Responsive CSS -->
+
+    <!-- Custom CSS -->
+
+
+
+	
+	<script src="static/js/modernizr.custom.79639.js"></script>
+
+</head>
+<body class="seo_version">
+    <nav class="navbar navbar-expand-lg navbar-light "  style="background-color: #e3f2fd;" >
+  <a class="navbar-brand" href="/"><img src="static/images/logo-light.png" width="60px"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      {%if session['userid']%}
+      <li class="nav-item active">
+        <a class="nav-link" href="/logout">로그아웃 <span class="sr-only">(current)</span></a>
+      </li>
+      {%else%}
+      <li class="nav-item active">
+        <a class="nav-link" href="/login">로그인 <span class="sr-only">(current)</span></a>
+      </li>
+      {%endif%}
+
+      {%if session['userid'] %}
+      <li class="nav-item">
+        <a class="nav-link" href="/covidgui">코로나 확진자 정보</a>
+      </li>
+      {%else%}
+      <li class="nav-item">
+        <a class="nav-link" href="/register">회원가입</a>
+      </li>
+      {% endif %}
+      <li class="nav-item">
+        <a class="nav-link" href="/profile">
+          내정보
+        </a>
+
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/photo">
+          사진</a>
+      </li>
+    </ul>
+
+  </div>
+</nav>
+
+    <div id="preloader">
+		<div class="loader-wrapper">
+			<div class="loader-new">
+				<div class="ball"></div>
+				<div class="ball"></div>
+				<div class="ball"></div>
+			</div>
+			<div class="text">LOADING...</div>
+		</div>
+	</div>
+	<!-- END LOADER -->
+	
+	<!-- Start header -->
+	<header class="top-navbar">
+<!--			<div class="container">-->
+<!--				<a class="navbar-brand" href="index.html">-->
+<!--					<img src="static/images/logo-seo.jpg" style ="max-width: 150px; height: 80px"/>-->
+<!--				</a>-->
+<!--			</div>-->
+
+	</header>
+	<!-- End header -->
+    <div id="slider" class="sl-slider-wrapper">
+
+		<div class="sl-slider">
+
+			<div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="-25" data-slice2-rotation="-25" data-slice1-scale="2" data-slice2-scale="2">
+
+                <div class="sl-slide-inner">
+					<div class="bg-img-1"></div>
+					<br><p> <blockquote><h1 style= "font-size:600%; color:#f5eeee">MASKD</style></h1>
+					<h3 style ="color:white">Mask Detect</h3><br><br>
+					<h4 style ="font-size:70%; color:white">MASKD 마스크 탐지기앱은 A.I 를 이용하여 마스크 착용여부를 검사하는 앱입니다.<br><br>
+					The MASKD mask detector app is an app that checks whether a mask is worn using A.I.</h4></p>
+					<a href="/photo" class="bttn-new">Start now</a>
+					</blockquote>
+				</div>
+			</div>
+
+		</div> <!--/sl-slider -->
+
+	</div><!-- /slider-wrapper -->
+
+    <div id="about" class="section wb nopadtop">
+        <div class="container">
+            <div class="row">
+				<div class="col-md-6 m40">
+                    <div class="message-box">
+                        <h4>BS Company</h4>
+                        <h2>Welcome to MASKD</h2>
+                        <p><b>MASKD</b>는 AI를 이용하여 마스크의 착용여부를 검사하는 앱입니다.</p>
+						
+						<p>요즘 코로나 19로 많은 사람들이 힘든 시간을 보내고 있습니다. 코로나 19는 마스크 착용만으로 충분히 예방할 수 있어 필수요소입니다.
+							그러나 종종 공공장소에서 마스크를 쓰지 않은 사람들이 보입니다. 이러한 행동은 나 포함 모두를 위험에 빠뜨리는 행동입니다.
+						실제로 마스크 미착용자로 인해 확진자가 폭등했었던 사례들도 있었기 때문에 이러한 전파를 줄이고자<b> MASKD</b> 라는 앱이 존재합니다. </p>
+                        <p>Nowadays, many people are having a hard time with Covid-19. Covid-19 is essential because it can be prevented by just wearing a mask.
+							However, often people are seen wearing masks in public. These are actions that endanger everyone, including me.
+							In fact, there have been cases where the confirmers have skyrocketed due to maskless wearers, so there is an app called MASKD to reduce this spread.</p>
+                    </div><!-- end messagebox -->
+                </div><!-- end col -->
+				
+                <div class="col-md-6">
+                    <div class="post-media wow fadeIn">
+                        <img src="static/images/mask.jpg" alt="" class="img-fluid">
+                    </div><!-- end media -->
+                </div><!-- end col -->
+                
+			</div><!-- end row -->
+						
+			<hr class="hr1">
+			
+			<div class="section-title text-center">               
+                <h3>Our System</h3>
+				<p class="lead"><b>MASKD</b>시스템은 마스크 착용여부를 확인 해 주는 시스템입니다.<br>
+					 착용했을시 초록색 상자와 함께 PASS 라는 문구가 뜨게 되고, 
+					<br>미착용 했을 시에는 빨간 상자와 Please wear a mask 라는 문구와 함께 벨이 울리게 됩니다.</p><br>
+				<p>The system we developed is a system that checks whether a mask is worn. When worn, the phrase PASS appears with a green box
+					If it is not worn, the bell rings with a red box and the phrase Please wear a mask.</p>
+            </div><!-- end title -->
+			
+			<div class="seo-services row clearfix">
+                <div class="col-md-6 col-xs-12">
+					<div class="why-img-box">
+						<img src="static/images/why-img-01.jpg" class="asd" alt="" style="height:200px"/>
+					</div>
+                </div><!-- end col -->
+
+                <div class="col-md-6 col-xs-12">
+					<div class="why-dit">
+						<h4>About A.I</h4>
+						<p>Machine learning에 마스크 착용했을때의 사진 데이터와 미착용했을때의 사진 데이터를 입력시켜 스스로 학습 시킨 후 Relu함수를 통해 마스크를 착용여부를 판단한다. 
+						</p>
+						<p>The machine learns itself by inputting the photo data when the mask is worn and the photo data when it is not worn in Machine Learning, and then determines whether the mask is worn through the Relu function.</p>
+					</div>
+
+				</div><!-- end col -->
+				<div class="row vission-and-mission">
+					<div class="col-md-12">
+						<ul class="nav nav-pills nav-justified" id="myTab" role="tablist">
+							<li class="nav-item"><a class="nav-link active" href="#tab_a" data-toggle="tab">Our Purpose</a></li>
+						<!--	<li class="nav-item"><a class="nav-link" href="#tab_b" data-toggle="tab">Our Vission</a></li>	-->			
+						</ul>
+						<div class="tab-content">
+							<div class="tab-pane fade show active" id="tab_a">
+								<div class="box-inner-m">
+									<p>우리의 목적은 공공장소와 같은 실내에서 모두 이 앱을 사용하여 실내에서의 코로나 확산을 막는 것이다. 또한 지금은 마스크를 사람과사람이 대면해서 검사하기 때문에 폭행과 폭언등의 일들이 많이 일어난다
+										그래서 우리는 대면검를 비대면으로 할 수 있게 만들어 폭행과 폭언과 같은 사건들을 줄이고자한다.
+									</p>
+									<p>Our goal is to prevent the corona from spreading indoors using this app both indoors and in public places. In addition, as masks are inspected face-to-face, a lot of things like assault and aggression happen.
+										So we want to make face-to-face swords non-face-to-face, reducing incidents like assault and aggression.</p>
+								</div>
+						</div>
+					</div>				
+				</div>
+		
+                <!--<div class="col-md-6 col-xs-12">-->
+					<div class="why-img-box">
+						<!--<img src="images/why-img-02.jpg" class="img-fluid" alt="" />-->
+					</div>
+                </div><!-- end col -->
+            </div><!-- end how-its-work -->
+        </div><!-- end container -->
+	</div><!-- end section -->
+	
+	<hr style="border: solid 1px black ;">
+	<footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+							<img src="static/images/logo-light.png" style ="max-width: 300px; height:300px;">
+                        </div>
+                        <p> </p>
+                        <p></p>
+                    </div><!-- end clearfix -->
+                </div><!-- end col -->
+				
+				<div class="col-lg-2 col-md-6 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <h3>Information</h3>
+                        </div>
+                        <ul class="footer-links">
+                            <li><a href="/">홈</a></li>
+                            {% if session['userid'] %}
+                            <li><a href="/logout">로그아웃</a></li>
+                            {% else %}
+                            <li><a href="/login">로그인</a></li>
+                            {% endif %}
+
+							<li><a href="/register">register</a></li>
+							<li><a href="/covidgui">covidgui</a></li>
+							<li><a href="#">Contact</a></li>
+                        </ul><!-- end links -->
+                    </div><!-- end clearfix -->
+                </div><!-- end col -->
+
+                <div class="col-lg-3 col-md-6 col-xs-12">
+                    <div class="widget clearfix">
+						<div class="widget-title">
+							<h3>Newsletter</h3>
+						</div>
+						<p></p>
+						<div class="news-box">
+							<form action="#" method="post">
+								<div class="form-group">
+									<input class="form-control" placeholder="Email address" type="email">
+									<button type="submit">
+										<svg id="Layer_11" data-name="Layer 11" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.19 17.71">
+											<path class="cls-1" d="M311,387.93a.89.89,0,0,0-1.27,1.26l6.44,6.44H295a.89.89,0,0,0-.89.89.9.9,0,0,0,.89.9h21.24l-6.44,6.42a.91.91,0,0,0,0,1.27.89.89,0,0,0,1.27,0l8-8a.87.87,0,0,0,0-1.25Z" transform="translate(-294.08 -387.67)"></path> </svg>
+									</button>
+								</div>
+							</form>
+						</div>
+						
+                        <div class="widget-title">
+                            <h3>Social</h3>
+                        </div>
+                        <ul class="footer-links social-md">
+                            <li><a class="fb btn-a" title="Facebook" data-tippy-animation="scale" href="https://www.facebook.com"><i class="fa fa-facebook"></i></a></li>
+                            <li><a class="gi btn-a" title="Github" data-tippy-animation="scale" href="#"><i class="fa fa-github"></i> </a></li>
+                            <li><a class="tw btn-a" title="Twitter" data-tippy-animation="scale" href="#"><i class="fa fa-twitter"></i> </a></li>
+                            <li><a class="dr btn-a" title="Dribbble" data-tippy-animation="scale" href="#"><i class="fa fa-dribbble"></i> </a></li>
+                            <li><a class="pi btn-a" title="Pinterest" data-tippy-animation="scale" href="#"><i class="fa fa-pinterest"></i> </a></li>
+                        </ul><!-- end links -->
+                    </div><!-- end clearfix -->
+                </div><!-- end col -->
+				
+				<div class="col-lg-3 col-md-6 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <h3>Contact Details</h3>
+                        </div>
+
+                        <ul class="footer-links">
+                            <li><a href="mailto:#">maskD@gmail.com</a></li>
+                            <li><a href="/github">https://github.com/devaspirant0510/</a></li>
+                            <li></li>
+                        </ul><!-- end links -->
+                    </div><!-- end clearfix -->
+                </div><!-- end col -->
+				
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </footer><!-- end footer -->
+	
+    <div class="copyrights">
+        <div class="container">
+            <div class="footer-distributed">
+                <div class="footer-left">
+                    <p class="footer-company-name">All Rights Reserved. &copy; 2020<a href="#">MDmaskd</a> Design By : <a href="https://html.design/">html design</a></p>
+                </div>
+            </div>
+        </div><!-- end container -->
+    </div><!-- end copyrights -->
+
+    <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
+
+    <!-- ALL JS FILES -->
+    <script src="static/js/all.js"></script>
+    <!-- ALL PLUGINS -->
+	<script src="static/js/tippy.all.min.js"></script>
+    <script src="static/js/custom.js"></script>
+	
+	<script src="static/js/jquery.ba-cond.min.js"></script>
+	<script src="static/js/jquery.slitslider.js"></script>
+	<script type="text/javascript">	
+			$(function() {
+			
+				var Page = (function() {
+
+					var $nav = $( '#nav-dots > span' ),
+						slitslider = $( '#slider' ).slitslider( {
+							onBeforeChange : function( slide, pos ) {
+
+								$nav.removeClass( 'nav-dot-current' );
+								$nav.eq( pos ).addClass( 'nav-dot-current' );
+
+							}
+						} ),
+
+						init = function() {
+
+							initEvents();
+							
+						},
+						initEvents = function() {
+
+							$nav.each( function( i ) {
+							
+								$( this ).on( 'click', function( event ) {
+									
+									var $dot = $( this );
+									
+									if( !slitslider.isActive() ) {
+
+										$nav.removeClass( 'nav-dot-current' );
+										$dot.addClass( 'nav-dot-current' );
+									
+									}
+									
+									slitslider.jump( i + 1 );
+									return false;
+								
+								} );
+								
+							} );
+
+						};
+
+						return { init : init };
+
+				})();
+
+				Page.init();
+			
+			});
+		</script>
+		
+		<script>
+			tippy('.btn-a')
+		</script>
+
+</body>
+</html>

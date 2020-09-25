@@ -1,0 +1,149 @@
+{% extends "nav.html" %}
+
+
+{% block content %}
+
+    <h1>코로나 19</h1>
+    <h2>환자 현황</h2>
+
+    <div style="width:320px; height:300px; border:1px solid black; float:left; margin-left: auto; margin-right: auto center">
+
+
+    <table style="width: 300px; margin: 10px"border="1" bordercolor="black" >
+
+        <th colspan="2">일일 확진자</th>
+            <tr>
+
+                    <td>국내 확진자</td>
+                    <td>해외 유입</td>
+
+            </tr>
+            <tr>
+                <td>{{loc}}명</td>
+                <td>{{glo}}명</td>
+            </tr>
+        
+        </table>
+        <table style="width: 300px; margin: 10px" border="1" bordercolor="black" >
+        <th>검사현황</th>
+        <tr>
+            <td>누적검사수</td>
+        </tr>
+        <tr>
+            <td>{{check[0]}}</td>
+        </tr>
+        <tr>
+            <td>누적검사완료수</td>
+        </tr>
+        <tr>
+            <td>{{check[1]}}</td>
+        </tr>
+        <tr>
+            <td>누적확진률</td>
+        </tr>
+        <tr>
+            <td>{{check[2]}}</td>
+        </tr>
+        
+        </table>
+        </div>
+    
+        
+        <div style="width:320px; height:300px; border:1px solid green; float:left;">
+        <table style="width: 300px; margin: 10px"border="1" bordercolor="black" >
+            
+            <th colspan="4">누적확진자</th>
+            <tr>
+                <td>확진자</td>
+                <td>완치</td>
+                <td>격리중</td>
+                <td>사망</td>
+            </tr>
+            <tr>
+                <td rowspan="3">{{acc[0]}}명</td>
+                <td rowspan="3">{{acc[1]}}명</td>
+                <td rowspan="3">{{acc[2]}}명</td>
+                <td rowspan="3">{{acc[3]}}명</td>
+            </tr>
+            
+        </table>
+            
+            <table style="width: 300px; margin: 10px"border="1" bordercolor="black">
+                <th colspan="2">지역별 확진자</th>
+                <tr>
+                    <td style="background-color:burlywood">지역</td>
+                    <td>
+                        <select name="area">
+                            <option value="">지역을 선택하세요</option>
+                            <option value=""></option>
+                        </select>
+                    
+                    </td>
+                </tr>
+                <tr>
+                    <td  style="background-color:burlywood">누적확진환자</td>
+                     <td></td>                   
+
+                </tr>
+             <tr>
+                    <td  style="background-color:burlywood">전일대비 증감</td>
+                     <td></td>                   
+
+                </tr>
+                 <tr>
+                    <td  style="background-color:burlywood">격리중</td>
+                     <td></td>                   
+
+                </tr>
+                 <tr>
+                    <td  style="background-color:burlywood">누적격리해제</td>
+                     <td></td>                   
+
+                </tr>
+                 <tr>
+                    <td  style="background-color:burlywood">사망자</td>
+                     <td></td>                   
+
+                </tr>            
+            </table>
+        </div>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

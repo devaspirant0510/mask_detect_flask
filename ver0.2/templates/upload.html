@@ -1,0 +1,9 @@
+{% extends "nav.html" %}
+{% block content %}
+<img src="static/number{{num}}.jpg">
+<form action="/upload" method="post">
+    <button type="submit">홈으로</button>
+</form>
+<h3>마스크 착용:{{maskd}}</h3>
+<h3>마스크 미착용:{{nomaskd}}</h3>
+{% endblock %}

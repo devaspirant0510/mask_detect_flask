@@ -1,0 +1,10 @@
+{% extends "nav.html" %}
+
+{% block content %}
+
+<form action="/photo" enctype="multipart/form-data" method="post">
+    <div><input type="file" name="test"></div>
+
+    <div><button type="submit"> 전송 </button></div>
+</form>
+{% endblock %}
