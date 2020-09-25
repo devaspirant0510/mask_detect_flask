@@ -23,7 +23,6 @@ print("처음불러온 df:",df)
 
 
 def detect_and_predict_mask(frame, faceNet, maskNet):
-
 	(h, w) = frame.shape[:2]
 	blob = cv2.dnn.blobFromImage(frame, 1.0, (224, 224),
 		(104.0, 177.0, 123.0))
