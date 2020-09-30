@@ -20,8 +20,8 @@
 
 
 
-https://blog.naver.com/nova020510
-자세한 내용은 블로그를 참고해주세요
+##https://blog.naver.com/nova020510
+##자세한 내용은 블로그를 참고해주세요
 
 
  
